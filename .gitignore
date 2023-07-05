@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 dependencies
+*.json
 
 ### Eclipse ###
 .apt_generated
