@@ -1,5 +1,6 @@
 import br.com.buscadorcep.modelos.ConsultaCep;
 import br.com.buscadorcep.modelos.Endereco;
+import br.com.buscadorcep.modelos.GeraArquivo;
 
 import java.util.Scanner;
 
@@ -14,6 +15,9 @@ public class Principal {
         try {
             Endereco novoEndereco = consultaCep.buscaEndereco(cep);
             System.out.println(novoEndereco);
+
+            GeraArquivo geraNovoArquivo = new GeraArquivo();
+            geraNovoArquivo.salvaJson(novoEndereco);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } finally {
